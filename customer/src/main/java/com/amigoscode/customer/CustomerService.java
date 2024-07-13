@@ -34,6 +34,7 @@ public class CustomerService {
         FraudCheckResponse fraudCheckResponse =
                 fraudClient.isFraudster(customer.getId());
 
+        notificationClient.sendNotification(new NotificationRequest(customer.getId(), customer.getFirstName(), "Hello World", "anna@yahoo.com"));
 
         // todo: make it asynce. i.e add to queue
 

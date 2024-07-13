@@ -10,6 +10,6 @@ import javax.management.Notification;
 @FeignClient("notification")
 public interface NotificationClient {
 
-    @PostMapping("api/v1/notification")
+    @PostMapping("api/v1/send-notification")
     void sendNotification(@RequestBody NotificationRequest notificationRequest);
 }
